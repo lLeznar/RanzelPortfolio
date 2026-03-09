@@ -1,0 +1,78 @@
+import { motion } from 'framer-motion';
+import { Wifi } from 'lucide-react';
+import { Project } from '../../types';
+import { fadeIn } from '../../constants/animations';
+
+interface ProjectCardProps {
+  project: Project;
+  featured?: boolean;
+}
+
+export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+  const colorMap = {
+    cyan: 'bg-cyan-400/8 text-cyan-400 border-cyan-400/15 hover:bg-cyan-400/15',
+    emerald: 'bg-emerald-400/8 text-emerald-400 border-emerald-400/15 hover:bg-emerald-400/15',
+    amber: 'bg-amber-400/8 text-amber-400 border-amber-400/15 hover:bg-amber-400/15',
+  };
+
+  return (
+    <motion.div
+      variants={fadeIn}
+      whileHover={{ scale: featured ? 1.01 : 1.02, y: -5, transition: { duration: 0.2 } }}
+      data-cursor="expand"
+      className={`group relative rounded-3xl border transition-all duration-500 overflow-hidden md:col-span-2 ${
+        featured 
+          ? 'p-8 bg-slate-900/40 border-cyan-400/20 hover:border-cyan-400/40 shadow-2xl' 
+          : 'p-7 glass-card border-slate-800 hover:border-emerald-400/30'
+      }`}
+    >
+      {/* Featured Glass Overlay */}
+      {featured && (
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-emerald-500/5 pointer-events-none" />
+      )}
+
+      {/* Status badge */}
+      <div className={`absolute top-6 right-8 px-3 py-1 border rounded-full text-[10px] font-mono tracking-wider z-10 ${
+        featured ? 'bg-cyan-400/15 border-cyan-400/30 text-cyan-400' : 'bg-emerald-400/15 border-emerald-400/30 text-emerald-400'
+      }`}>
+        {project.status.toUpperCase()}
+      </div>
+
+      <div className="relative z-10 h-full flex flex-col">
+        <div className="flex items-start gap-4 mb-6">
+          <div className={`p-3 rounded-2xl transition-colors ${
+            featured ? 'bg-cyan-400/10 text-cyan-400 group-hover:bg-cyan-400/20' : 'bg-emerald-400/10 text-emerald-400 group-hover:bg-emerald-400/15'
+          }`}>
+            {project.icon}
+          </div>
+          <div>
+            <h4 className={`font-bold transition-colors mb-1 ${
+              featured ? 'text-2xl md:text-3xl text-slate-50 group-hover:text-cyan-300' : 'text-xl text-slate-100 group-hover:text-emerald-300'
+            }`}>
+              {project.name}
+            </h4>
+            <p className="text-xs font-mono text-slate-500 flex items-center gap-1.5 lights-on">
+              <Wifi size={12} className={featured ? 'text-cyan-400' : 'text-emerald-400'} /> 
+              {featured ? 'Featured System · Municipal Infrastructure' : 'Sector Respawn · Utility Platform'}
+            </p>
+          </div>
+        </div>
+
+        <p className={`text-slate-400/90 leading-relaxed mb-8 ${featured ? 'text-base md:text-lg' : 'text-sm'}`}>
+          {project.description}
+        </p>
+
+        <div className="mt-auto flex flex-wrap gap-2.5">
+          {project.tags.map((tag, i) => (
+            <span
+              key={i}
+              className={`px-3 py-1.5 text-[11px] font-mono rounded-lg border transition-all duration-300 ${colorMap[tag.color] || colorMap.cyan}`}
+            >
+              {tag.name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}

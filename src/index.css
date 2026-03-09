@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617; /* bg-slate-950 */
+  --foreground: #cbd5e1; /* text-slate-300 */
+}
+
+html, body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* Custom scrollbar - hidden for snap scroll */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Animated gradient border for profile image */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Floating dots animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Grid pattern background */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Pulse glow for the status badge */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(34, 211, 238, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Global Cursor Hide - Final override */
+* {
+  cursor: none !important;
+}
