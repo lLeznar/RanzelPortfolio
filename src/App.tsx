@@ -8,6 +8,7 @@ import { ExperienceSection } from './components/sections/ExperienceSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { EducationSection } from './components/sections/EducationSection';
+import { GlitchBackground } from './components/animations/GlitchBackground';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState(0);
@@ -59,18 +60,13 @@ export default function App() {
   return (
     <div
       ref={scrollRef}
-      className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 bg-grid cursor-none"
+      className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 cursor-none"
     >
       <CustomCursor />
       <ScrollProgress />
       <NavDots activeSection={activeSection} />
 
-      {/* Background ambient glow */}
-      <div className="fixed inset-0 z-0 flex justify-center items-start overflow-hidden pointer-events-none">
-        <div className="w-[800px] h-[600px] bg-cyan-900/8 rounded-full blur-[150px] -top-48 absolute"></div>
-        <div className="w-[500px] h-[500px] bg-emerald-900/8 rounded-full blur-[120px] top-[60%] absolute right-[-150px]"></div>
-        <div className="w-[400px] h-[400px] bg-violet-900/5 rounded-full blur-[100px] bottom-[-100px] left-[-100px] absolute"></div>
-      </div>
+      <GlitchBackground />
 
       <div className="max-w-5xl w-full mx-auto px-6 relative z-10">
         <HeroSection />

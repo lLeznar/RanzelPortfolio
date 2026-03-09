@@ -84,6 +84,21 @@ html, body {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+/* Professional Text Glitch - White/Grey */
+@keyframes text-glitch-professional {
+  0% { text-shadow: 0.04em 0 0 rgba(255, 255, 255, 0.3), -0.03em -0.04em 0 rgba(148, 163, 184, 0.3), -0.04em 0.04em 0 rgba(71, 85, 105, 0.3); }
+  14% { text-shadow: 0.04em 0 0 rgba(255, 255, 255, 0.3), -0.03em -0.04em 0 rgba(148, 163, 184, 0.3), -0.04em 0.04em 0 rgba(71, 85, 105, 0.3); }
+  15% { text-shadow: -0.04em -0.02em 0 rgba(255, 255, 255, 0.3), 0.02em 0.02em 0 rgba(148, 163, 184, 0.3), -0.04em -0.04em 0 rgba(71, 85, 105, 0.3); }
+  49% { text-shadow: -0.04em -0.02em 0 rgba(255, 255, 255, 0.3), 0.02em 0.02em 0 rgba(148, 163, 184, 0.3), -0.04em -0.04em 0 rgba(71, 85, 105, 0.3); }
+  50% { text-shadow: 0.02em 0.04em 0 rgba(255, 255, 255, 0.3), 0.04em 0 0 rgba(148, 163, 184, 0.3), 0.04em -0.04em 0 rgba(71, 85, 105, 0.3); }
+  99% { text-shadow: 0.02em 0.04em 0 rgba(255, 255, 255, 0.3), 0.04em 0 0 rgba(148, 163, 184, 0.3), 0.04em -0.04em 0 rgba(71, 85, 105, 0.3); }
+  100% { text-shadow: -0.02em 0 0 rgba(255, 255, 255, 0.3), -0.02em -0.02em 0 rgba(148, 163, 184, 0.3), -0.02em -0.04em 0 rgba(71, 85, 105, 0.3); }
+}
+
+.animate-text-glitch-pro {
+  animation: text-glitch-professional 3s infinite linear alternate-reverse;
+}
+
 /* Global Cursor Hide - Final override */
 * {
   cursor: none !important;

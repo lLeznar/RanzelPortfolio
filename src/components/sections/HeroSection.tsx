@@ -9,8 +9,8 @@ import { stats } from '../../data/portfolio';
 export function HeroSection() {
   const typingText = useTypingEffect([
     'Full-Stack Web Developer',
-    'Systems Architect',
-    'Government Tech Builder',
+    'System Architect',
+    'Mobile Developer',
     'React & Laravel Engineer',
   ]);
 
@@ -50,24 +50,24 @@ export function HeroSection() {
           <motion.div variants={fadeIn} className="flex flex-wrap justify-center md:justify-start items-center gap-3 text-sm font-mono">
             <MagneticButton>
               <a href="mailto:ranzelmerto.rm@gmail.com" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
-                <Mail size={15} className="text-cyan-400 group-hover:scale-110 transition-transform" /> Email
+                <Mail size={15} className="text-cyan-400 group-hover:scale-110 transition-transform shrink-0" /> ranzelmerto.rm@gmail.com
               </a>
             </MagneticButton>
             <MagneticButton>
               <a href="tel:+639366808540" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
-                <Phone size={15} className="text-cyan-400 group-hover:scale-110 transition-transform" /> Phone
+                <Phone size={15} className="text-cyan-400 group-hover:scale-110 transition-transform shrink-0" /> +639366808540
               </a>
             </MagneticButton>
             <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 text-slate-500">
-              <MapPin size={15} className="text-cyan-400" /> Cabanatuan City
+              <MapPin size={15} className="text-cyan-400 shrink-0" /> Cabanatuan City, Nueva Ecija, Philippines
             </div>
             <MagneticButton className="flex">
-              <a href="#" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
                 <Github size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
             <MagneticButton className="flex">
-              <a href="#" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
                 <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
@@ -75,16 +75,23 @@ export function HeroSection() {
         </div>
 
         <motion.div variants={scaleIn} className="shrink-0">
-          <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 group">
-            <div className="absolute inset-[-4px] rounded-full bg-gradient-to-tr from-cyan-400 via-emerald-400 to-violet-500 animate-spin-slow opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-[2px]"></div>
-            <div className="absolute inset-[3px] rounded-full overflow-hidden bg-slate-950 border-2 border-slate-900">
+          <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 group">
+            {/* Animated Gradient Border Layer */}
+            <div className="absolute inset-[-4px] rounded-[2.5rem] bg-gradient-to-tr from-cyan-400 via-emerald-400 to-violet-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-[2px]"></div>
+            
+            {/* Inner Content Container */}
+            <div className="absolute inset-[3px] rounded-[2.2rem] overflow-hidden bg-slate-950 border-2 border-slate-900">
               <img
                 src="/profile.jpg"
                 alt="Ranzel Aris Merto"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-110"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-110"
               />
+              {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-500"></div>
             </div>
+
+            {/* Subtle floating accent element */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-colors duration-500"></div>
           </div>
         </motion.div>
       </div>
