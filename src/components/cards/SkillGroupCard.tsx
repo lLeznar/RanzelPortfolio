@@ -11,10 +11,10 @@ export function SkillGroupCard({ group }: SkillGroupCardProps) {
     <motion.div
       variants={fadeIn}
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-      className="group p-6 rounded-2xl glass-card border border-slate-800 hover:border-cyan-400/20 hover:shadow-[0_0_25px_rgba(34,211,238,0.06)] transition-all duration-300"
+      className="group p-6 rounded-2xl glass-card border border-white/5 hover:border-white/20 transition-all duration-300"
     >
       <div className="flex items-center gap-3 mb-5">
-        <div className="p-1.5 rounded-lg bg-slate-800 text-cyan-400 group-hover:bg-cyan-400/10 transition-colors">
+        <div className="p-1.5 rounded-lg bg-white/5 text-slate-300 group-hover:bg-white/10 transition-colors">
           {group.icon}
         </div>
         <h4 className="text-slate-200 font-semibold text-sm uppercase tracking-wider">
@@ -25,9 +25,9 @@ export function SkillGroupCard({ group }: SkillGroupCardProps) {
         {group.items.map((skill, i) => (
           <span
             key={i}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/80 text-slate-300 text-xs font-mono rounded-md border border-slate-700/50 hover:bg-cyan-400/10 hover:text-cyan-300 hover:border-cyan-400/30 transition-all duration-200 group/skill"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/[0.03] text-slate-400 text-[10px] uppercase font-bold rounded-md border border-white/5 hover:bg-white/10 hover:text-slate-200 transition-all duration-200 group/skill"
           >
-            <span className="text-slate-400 group-hover/skill:text-cyan-400 transition-colors">
+            <span className="text-slate-500 group-hover/skill:text-slate-300 transition-colors">
               {skill.icon}
             </span>
             {skill.name}

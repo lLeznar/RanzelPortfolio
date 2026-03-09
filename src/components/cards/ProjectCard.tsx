@@ -9,10 +9,11 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+  const professionalTag = 'bg-white/5 text-slate-400 border-white/5 hover:bg-white/10 hover:text-slate-100';
   const colorMap = {
-    cyan: 'bg-cyan-400/8 text-cyan-400 border-cyan-400/15 hover:bg-cyan-400/15',
-    emerald: 'bg-emerald-400/8 text-emerald-400 border-emerald-400/15 hover:bg-emerald-400/15',
-    amber: 'bg-amber-400/8 text-amber-400 border-amber-400/15 hover:bg-amber-400/15',
+    cyan: professionalTag,
+    emerald: professionalTag,
+    amber: professionalTag,
   };
 
   return (
@@ -22,18 +23,18 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       data-cursor="expand"
       className={`group relative rounded-3xl border transition-all duration-500 overflow-hidden md:col-span-2 ${
         featured 
-          ? 'p-8 bg-slate-900/40 border-cyan-400/20 hover:border-cyan-400/40 shadow-2xl' 
-          : 'p-7 glass-card border-slate-800 hover:border-emerald-400/30'
+          ? 'p-8 bg-slate-900/40 border-white/10 hover:border-white/30 shadow-2xl' 
+          : 'p-7 glass-card border-slate-800 hover:border-white/20'
       }`}
     >
       {/* Featured Glass Overlay */}
       {featured && (
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-emerald-500/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 pointer-events-none" />
       )}
 
       {/* Status badge */}
-      <div className={`absolute top-6 right-8 px-3 py-1 border rounded-full text-[10px] font-mono tracking-wider z-10 ${
-        featured ? 'bg-cyan-400/15 border-cyan-400/30 text-cyan-400' : 'bg-emerald-400/15 border-emerald-400/30 text-emerald-400'
+      <div className={`absolute top-6 right-8 px-3 py-1 border rounded-full text-[9px] font-bold uppercase tracking-[0.2em] z-10 ${
+        featured ? 'bg-white/10 border-white/20 text-slate-100 shadow-xl' : 'bg-white/5 border-white/10 text-slate-400'
       }`}>
         {project.status.toUpperCase()}
       </div>

@@ -50,9 +50,9 @@ export function EducationSection() {
         className="pb-8 pt-12 border-t border-slate-800/50 text-center flex flex-col items-center gap-3 mt-auto"
       >
         <div className="flex items-center gap-4 mb-2">
-          <a href="mailto:ranzelmerto.rm@gmail.com" className="text-slate-500 hover:text-cyan-400 transition-colors"><Mail size={16} /></a>
-          <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-cyan-400 transition-colors"><Github size={16} /></a>
-          <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-cyan-400 transition-colors"><Linkedin size={16} /></a>
+          <a href="mailto:ranzelmerto.rm@gmail.com" className="text-slate-600 hover:text-slate-300 transition-colors"><Mail size={16} /></a>
+          <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-300 transition-colors"><Github size={16} /></a>
+          <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-300 transition-colors"><Linkedin size={16} /></a>
         </div>
         <p className="text-sm font-mono text-slate-600">
           © {new Date().getFullYear()} <span className="text-slate-500">Ranzel Aris Merto</span>

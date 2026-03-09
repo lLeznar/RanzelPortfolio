@@ -17,14 +17,10 @@ export function EducationCard({ period, title, institution, type = 'degree' }: E
     <motion.div 
       variants={fadeIn} 
       whileHover={{ scale: 1.02 }} 
-      className={`p-6 rounded-2xl glass-card border border-slate-800 transition-all duration-300 group ${
-        isCert ? 'hover:border-emerald-400/20' : 'hover:border-cyan-400/20'
-      }`}
+      className={`p-6 rounded-2xl glass-card border border-slate-800 transition-all duration-300 group hover:border-white/20`}
     >
       <div className="flex items-center gap-3 mb-3">
-        <div className={`p-2 rounded-lg bg-slate-800 group-hover:bg-opacity-10 transition-colors ${
-          isCert ? 'text-emerald-400 group-hover:bg-emerald-400' : 'text-cyan-400 group-hover:bg-cyan-400'
-        }`}>
+        <div className={`p-2 rounded-lg bg-white/5 text-slate-300 group-hover:bg-white/10 transition-colors`}>
           <Icon size={18} />
         </div>
         <span className="text-sm font-mono text-slate-500">{period}</span>

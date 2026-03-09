@@ -14,13 +14,13 @@ export function ExperienceCard({ exp }: ExperienceCardProps) {
       whileHover={{ scale: 1.015, transition: { duration: 0.2 } }}
       className={`group relative flex flex-col md:flex-row gap-5 p-6 rounded-2xl glass-card border transition-all duration-300 ${
         exp.type === 'current'
-          ? 'border-cyan-400/20 hover:border-cyan-400/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)]'
-          : 'border-slate-800 hover:border-slate-700 hover:shadow-[0_0_20px_rgba(34,211,238,0.05)]'
+          ? 'border-white/20 hover:border-white/40'
+          : 'border-slate-800 hover:border-white/20'
       }`}
     >
       {/* Current badge */}
       {exp.type === 'current' && (
-        <div className="absolute -top-3 right-6 px-3 py-0.5 bg-cyan-400/15 border border-cyan-400/30 rounded-full text-[10px] font-mono text-cyan-400 tracking-wider">
+        <div className="absolute -top-3 right-6 px-3 py-0.5 bg-white/10 border border-white/20 rounded-full text-[10px] uppercase font-bold text-slate-200 tracking-[0.2em] shadow-xl">
           CURRENT
         </div>
       )}
@@ -49,7 +49,7 @@ export function ExperienceCard({ exp }: ExperienceCardProps) {
         </p>
         <div className="flex flex-wrap gap-2">
           {exp.tags.map((tag, i) => (
-            <span key={i} className="px-2.5 py-1 bg-cyan-400/8 text-cyan-400 text-[11px] font-mono rounded-md border border-cyan-400/15 hover:bg-cyan-400/15 transition-colors">
+            <span key={i} className="px-2.5 py-1 bg-white/5 text-slate-400 text-[10px] uppercase font-bold rounded-md border border-white/5 hover:bg-white/10 hover:text-slate-200 transition-all">
               {tag}
             </span>
           ))}

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from 'lucide-react';
 import { useTypingEffect } from '../../hooks/useTypingEffect';
 import { staggerContainer, fadeIn, scaleIn } from '../../constants/animations';
-import { SplitText } from '../animations/SplitText';
 import { MagneticButton } from '../MagneticButton';
 import { stats } from '../../data/portfolio';
 
@@ -11,7 +10,7 @@ export function HeroSection() {
     'Full-Stack Web Developer',
     'System Architect',
     'Mobile Developer',
-    'React & Laravel Engineer',
+    'System Administrator',
   ]);
 
   return (
@@ -24,15 +23,20 @@ export function HeroSection() {
     >
       <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 pt-16 md:pt-0">
         <div className="flex-1 w-full text-center md:text-left">
-          <motion.div variants={fadeIn} className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/5 text-cyan-400 text-xs font-mono tracking-wider animate-pulse-glow">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            AVAILABLE FOR NEW OPPORTUNITIES
+          <motion.div variants={fadeIn} className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-300 text-[10px] uppercase font-bold tracking-[0.2em]">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/40 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+            </span>
+            Available for new opportunities
           </motion.div>
 
-          <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-50 tracking-tight mb-3 leading-[1.1]">
-            <SplitText text="Ranzel Aris" />
-            <span className="block bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              <SplitText text="Merto" delay={0.5} />
+          <motion.h1 
+            variants={fadeIn} 
+            className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight"
+          >
+            <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent animate-text-glitch-pro inline-block">
+              Ranzel Aris Merto
             </span>
           </motion.h1>
 
@@ -76,30 +80,27 @@ export function HeroSection() {
 
         <motion.div variants={scaleIn} className="shrink-0">
           <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 group">
-            {/* Animated Gradient Border Layer */}
-            <div className="absolute inset-[-4px] rounded-[2.5rem] bg-gradient-to-tr from-cyan-400 via-emerald-400 to-violet-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-[2px]"></div>
+            {/* Clean border glow */}
+            <div className="absolute inset-[-2px] rounded-[2.5rem] bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             {/* Inner Content Container */}
-            <div className="absolute inset-[3px] rounded-[2.2rem] overflow-hidden bg-slate-950 border-2 border-slate-900">
+            <div className="absolute inset-[1px] rounded-[2.4rem] overflow-hidden bg-slate-950 border border-white/10 shadow-2xl shadow-black/50">
               <img
                 src="/profile.jpg"
                 alt="Ranzel Aris Merto"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-110"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent group-hover:from-slate-950/40 group-hover:via-transparent transition-all duration-500"></div>
             </div>
-
-            {/* Subtle floating accent element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-colors duration-500"></div>
           </div>
         </motion.div>
       </div>
 
       <motion.div variants={fadeIn} className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
         {stats.map((stat, i) => (
-          <div key={i} className="text-center p-4 rounded-xl glass-card border border-slate-800/50">
-            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-1">
+          <div key={i} className="text-center p-4 rounded-xl glass-card border border-white/5 bg-white/[0.02]">
+            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent mb-1">
               {stat.value}
             </div>
             <div className="text-xs font-mono text-slate-500 uppercase tracking-wider">{stat.label}</div>
