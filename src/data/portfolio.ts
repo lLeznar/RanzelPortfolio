@@ -11,11 +11,11 @@ import {
   SiUbuntu, SiDocker, SiNginx, SiApache, SiCloudflare,
   SiGit, SiGithub, SiPostman, SiFigma
 } from '@icons-pack/react-simple-icons';
-import { Experience, Project, SkillGroup, Stat } from '../types';
+import { Experience, Project, SkillGroup } from '../types';
 
 export const experiences: Experience[] = [
   {
-    role: "Full-Stack Web Developer | System Architect",
+    role: "Full-Stack Web Developer | System Administrator",
     company: "Municipality of Santa Rosa",
     location: "Santa Rosa, Nueva Ecija",
     period: "2026 – Present",
@@ -137,11 +137,11 @@ export const skillsGroups: SkillGroup[] = [
   },
 ];
 
-export const stats: Stat[] = [
-  { value: "15+", label: "Departments Digitalized" },
-  { value: "3+", label: "Years Experience" },
-  { value: "10+", label: "Technologies" },
-  { value: "1", label: "Gov System Built" },
+export const personalDetails = [
+  { value: "June 22, 2000", label: "Birth Date", icon: "cake" },
+  { value: "Male", label: "Gender", icon: "user" },
+  { value: "Filipino", label: "Nationality", icon: "flag" },
+  { value: "Single", label: "Status", icon: "heart" },
 ];
 
 export const sectionNames = ["Home", "Experience", "Projects", "Skills", "Education"];

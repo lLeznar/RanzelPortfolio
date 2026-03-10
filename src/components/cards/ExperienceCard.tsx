@@ -12,7 +12,7 @@ export function ExperienceCard({ exp }: ExperienceCardProps) {
     <motion.div
       variants={fadeIn}
       whileHover={{ scale: 1.015, transition: { duration: 0.2 } }}
-      className={`group relative flex flex-col md:flex-row gap-5 p-6 rounded-2xl glass-card border transition-all duration-300 ${
+      className={`group relative flex flex-col md:flex-row gap-3 md:gap-5 p-4 md:p-6 rounded-2xl glass-card border transition-all duration-300 ${
         exp.type === 'current'
           ? 'border-white/20 hover:border-white/40'
           : 'border-slate-800 hover:border-white/20'

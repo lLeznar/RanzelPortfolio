@@ -13,11 +13,11 @@ export function ExperienceSection() {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={staggerContainer}
-      className="min-h-screen flex flex-col justify-center snap-start py-20 md:py-0"
+      className="min-h-screen flex flex-col justify-center snap-start snap-always py-16 md:py-0"
     >
       <SectionTitle icon={Briefcase} title="Experience" />
 
-      <div className="space-y-5">
+      <div className="space-y-3 md:space-y-5">
         {experiences.map((exp, idx) => (
           <ExperienceCard key={idx} exp={exp} />
         ))}

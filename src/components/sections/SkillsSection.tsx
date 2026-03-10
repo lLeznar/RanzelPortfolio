@@ -13,7 +13,7 @@ export function SkillsSection() {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={staggerContainer}
-      className="min-h-screen flex flex-col justify-center snap-start py-20 md:py-0"
+      className="min-h-screen flex flex-col justify-center snap-start snap-always py-16 md:py-0"
     >
       <SectionTitle icon={Code2} title="Technical Expertise" />
 

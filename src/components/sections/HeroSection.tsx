@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Cake, User, Flag, Heart } from 'lucide-react';
 import { useTypingEffect } from '../../hooks/useTypingEffect';
 import { staggerContainer, fadeIn, scaleIn } from '../../constants/animations';
 import { MagneticButton } from '../MagneticButton';
-import { stats } from '../../data/portfolio';
+import { personalDetails } from '../../data/portfolio';
+
+const iconMap: Record<string, React.ReactNode> = {
+  cake: <Cake size={18} className="text-cyan-400" />,
+  user: <User size={18} className="text-cyan-400" />,
+  flag: <Flag size={18} className="text-cyan-400" />,
+  heart: <Heart size={18} className="text-cyan-400" />,
+};
 
 export function HeroSection() {
   const typingText = useTypingEffect([
@@ -19,28 +26,25 @@ export function HeroSection() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="min-h-screen flex flex-col justify-center snap-start py-20 md:py-0 relative"
+      className="min-h-screen flex flex-col justify-center snap-start snap-always py-16 md:py-0 relative"
     >
       <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 pt-16 md:pt-0">
         <div className="flex-1 w-full text-center md:text-left">
-          <motion.div variants={fadeIn} className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-300 text-[10px] uppercase font-bold tracking-[0.2em]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/40 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
-            </span>
-            Available for new opportunities
-          </motion.div>
+          <motion.p variants={fadeIn} className="text-lg md:text-xl text-slate-400 mb-2 font-light tracking-wide">
+            Hi, I'm
+          </motion.p>
 
           <motion.h1 
             variants={fadeIn} 
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight"
           >
             <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent animate-text-glitch-pro inline-block">
-              Ranzel Aris Merto
+              Ranzel Aris A. Merto
             </span>
           </motion.h1>
 
           <motion.div variants={fadeIn} className="text-xl md:text-2xl font-medium text-slate-400 mb-6 h-8 md:h-10">
+            <span className="text-slate-400">And I am a </span>
             <span className="font-mono text-cyan-300">{typingText}</span>
             <span className="text-cyan-400 animate-blink ml-0.5">|</span>
           </motion.div>
@@ -97,25 +101,20 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      <motion.div variants={fadeIn} className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-        {stats.map((stat, i) => (
-          <div key={i} className="text-center p-4 rounded-xl glass-card border border-white/5 bg-white/[0.02]">
-            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent mb-1">
-              {stat.value}
+      <motion.div variants={fadeIn} className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12 md:mt-16">
+        {personalDetails.map((detail, i) => (
+          <div key={i} className="flex items-center gap-3 p-4 rounded-xl glass-card border border-white/5 bg-white/[0.02]">
+            {iconMap[detail.icon]}
+            <div>
+              <div className="text-sm md:text-base font-semibold text-slate-200">
+                {detail.value}
+              </div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">{detail.label}</div>
             </div>
-            <div className="text-xs font-mono text-slate-500 uppercase tracking-wider">{stat.label}</div>
           </div>
         ))}
       </motion.div>
 
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600"
-      >
-        <span className="text-xs font-mono tracking-widest">SCROLL</span>
-        <ChevronDown size={18} />
-      </motion.div>
     </motion.header>
   );
 }

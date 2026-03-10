@@ -14,6 +14,21 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Smooth snap transitions */
+.snap-y {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for snap container */
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+.snap-y {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .font-mono {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
@@ -97,6 +112,19 @@ html, body {
 
 .animate-text-glitch-pro {
   animation: text-glitch-professional 3s infinite linear alternate-reverse;
+}
+
+/* Matrix rain scroll for Skills section background */
+@keyframes matrix-rain {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 100px; }
+}
+
+/* Scanline flicker for Skills section */
+@keyframes scanline-flicker {
+  0% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.15; }
 }
 
 /* Global Cursor Hide - Final override */

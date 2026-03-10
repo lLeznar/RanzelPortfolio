@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { ScrollProgress } from './components/ScrollProgress';
 import { NavDots } from './components/NavDots';
 import { CustomCursor } from './components/CustomCursor';
@@ -13,14 +12,14 @@ import { GlitchBackground } from './components/animations/GlitchBackground';
 export default function App() {
   const [activeSection, setActiveSection] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-  
-  // Initialize Lenis Smooth Scroll
-  useSmoothScroll();
 
   useEffect(() => {
-    // Intersection Observer for Active Section
+    const container = scrollRef.current;
+    if (!container) return;
+
+    // Intersection Observer scoped to the snap container
     const observerOptions = {
-      root: null,
+      root: container,
       rootMargin: '-50% 0px -50% 0px',
       threshold: 0
     };
@@ -28,7 +27,7 @@ export default function App() {
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const sections = document.querySelectorAll('[data-section]');
+          const sections = container.querySelectorAll('[data-section]');
           const index = Array.from(sections).indexOf(entry.target);
           if (index !== -1) setActiveSection(index);
         }
@@ -36,7 +35,7 @@ export default function App() {
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    const sections = document.querySelectorAll('[data-section]');
+    const sections = container.querySelectorAll('[data-section]');
     sections.forEach(section => observer.observe(section));
 
     return () => observer.disconnect();
@@ -60,13 +59,13 @@ export default function App() {
   return (
     <div
       ref={scrollRef}
-      className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 cursor-none"
+      className="h-screen overflow-y-auto snap-y snap-mandatory bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 cursor-none"
     >
       <CustomCursor />
       <ScrollProgress />
       <NavDots activeSection={activeSection} />
 
-      <GlitchBackground />
+      <GlitchBackground activeSection={activeSection} />
 
       <div className="max-w-5xl w-full mx-auto px-6 relative z-10">
         <HeroSection />
