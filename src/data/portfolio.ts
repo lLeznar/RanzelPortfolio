@@ -144,4 +144,4 @@ export const personalDetails = [
   { value: "Single", label: "Status", icon: "heart" },
 ];
 
-export const sectionNames = ["Home", "Experience", "Projects", "Skills", "Education"];
+export const sectionNames = ["Home", "Experience", "Projects", "Skills", "Education", "Contact"];

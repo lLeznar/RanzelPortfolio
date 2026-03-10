@@ -5,13 +5,14 @@ interface GlitchBackgroundProps {
   activeSection?: number;
 }
 
-// Section background images mapped to indices 0-4
+// Section background images mapped to indices 0-5
 const sectionImages = [
   '/BackGround/herobg.png',       // 0 - Hero
   '/BackGround/expbg.jpg',        // 1 - Experience
   '/BackGround/projectbg.png',    // 2 - Projects
   '/BackGround/technicalbg.jpg',  // 3 - Skills / Technical
   '/BackGround/educationbg.jpg',  // 4 - Education
+  '/BackGround/herobg.png',       // 5 - Contact (reuses hero)
 ];
 
 // ─── Per-Section Motion Configs ────────────────────────────────────────────────
@@ -91,7 +92,20 @@ const educationMotion = {
   },
 };
 
-const motionConfigs = [heroMotion, experienceMotion, projectsMotion, skillsMotion, educationMotion];
+const contactMotion = {
+  animate: {
+    scale: [1, 1.05, 1.02, 1.05, 1],
+    y: ['0%', '-0.3%', '0.2%', '-0.2%', '0%'],
+  },
+  transition: {
+    duration: 18,
+    repeat: Infinity,
+    repeatType: 'reverse' as const,
+    ease: 'easeInOut' as const,
+  },
+};
+
+const motionConfigs = [heroMotion, experienceMotion, projectsMotion, skillsMotion, educationMotion, contactMotion];
 
 // Per-section color filters for unique mood
 const sectionFilters = [
@@ -100,6 +114,7 @@ const sectionFilters = [
   'grayscale(0.3) brightness(0.4) hue-rotate(160deg) saturate(0.6)', // Projects – cool tech
   'grayscale(0.6) brightness(0.35) contrast(1.2)',           // Skills – high-contrast dark
   'grayscale(0.4) brightness(0.45) sepia(0.25)',             // Education – warm parchment
+  'grayscale(0.5) brightness(0.4) hue-rotate(200deg) saturate(0.5)', // Contact – cool blue
 ];
 
 export function GlitchBackground({ activeSection = 0 }: GlitchBackgroundProps) {

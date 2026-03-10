@@ -7,6 +7,7 @@ import { ExperienceSection } from './components/sections/ExperienceSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { EducationSection } from './components/sections/EducationSection';
+import { ContactSection } from './components/sections/ContactSection';
 import { GlitchBackground } from './components/animations/GlitchBackground';
 
 export default function App() {
@@ -73,6 +74,7 @@ export default function App() {
         <ProjectsSection />
         <SkillsSection />
         <EducationSection />
+        <ContactSection />
       </div>
     </div>
   );
