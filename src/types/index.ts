@@ -31,8 +31,17 @@ export interface SkillItem {
 
 export interface SkillGroup {
   category: string;
+  description?: string;
   icon: React.ReactNode;
   items: SkillItem[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+  type: 'degree' | 'certification';
+  achievements?: string[];
 }
 
 export interface Stat {

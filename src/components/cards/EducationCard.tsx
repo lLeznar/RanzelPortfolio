@@ -7,10 +7,11 @@ interface EducationCardProps {
   title: string;
   institution: string;
   type?: 'degree' | 'cert';
+  achievements?: string[];
 }
 
-export function EducationCard({ period, title, institution, type = 'degree' }: EducationCardProps) {
-  const isCert = type === 'cert';
+export function EducationCard({ period, title, institution, type = 'degree', achievements }: EducationCardProps) {
+  const isCert = type === 'cert' || type as string === 'certification';
   const Icon = isCert ? Download : GraduationCap;
   
   return (
@@ -26,7 +27,18 @@ export function EducationCard({ period, title, institution, type = 'degree' }: E
         <span className="text-sm font-mono text-slate-500">{period}</span>
       </div>
       <h4 className="text-lg font-bold text-slate-200 mb-1">{title}</h4>
-      <p className="text-slate-400 text-sm">{institution}</p>
+      <p className="text-slate-400 text-sm mb-4">{institution}</p>
+
+      {achievements && achievements.length > 0 && (
+        <ul className="space-y-2 mt-auto border-t border-slate-800/50 pt-4">
+          {achievements.map((achievement, i) => (
+            <li key={i} className="flex items-start text-sm text-slate-400/90 leading-relaxed">
+              <span className="text-cyan-500 mr-2 mt-1.5 h-1 w-1 rounded-full shrink-0 bg-cyan-500"></span>
+              {achievement}
+            </li>
+          ))}
+        </ul>
+      )}
     </motion.div>
   );
 }

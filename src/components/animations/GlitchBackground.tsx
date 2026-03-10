@@ -7,12 +7,12 @@ interface GlitchBackgroundProps {
 
 // Section background images mapped to indices 0-5
 const sectionImages = [
-  '/BackGround/herobg.png',       // 0 - Hero
-  '/BackGround/expbg.jpg',        // 1 - Experience
-  '/BackGround/projectbg.png',    // 2 - Projects
-  '/BackGround/technicalbg.jpg',  // 3 - Skills / Technical
-  '/BackGround/educationbg.jpg',  // 4 - Education
-  '/BackGround/herobg.png',       // 5 - Contact (reuses hero)
+  '/sandbg.jpg',       // 0 - Hero
+  '/sandbg.jpg',       // 1 - Experience
+  '/sandbg.jpg',       // 2 - Projects
+  '/sandbg.jpg',       // 3 - Skills / Technical
+  '/sandbg.jpg',       // 4 - Education
+  '/sandbg.jpg',       // 5 - Contact (reuses hero)
 ];
 
 // ─── Per-Section Motion Configs ────────────────────────────────────────────────

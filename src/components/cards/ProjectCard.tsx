@@ -52,14 +52,14 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             }`}>
               {project.name}
             </h4>
-            <p className="text-xs font-mono text-slate-500 flex items-center gap-1.5 lights-on">
+            <p className="text-xs font-mono text-slate-400 flex items-center gap-1.5 lights-on">
               <Wifi size={12} className={featured ? 'text-cyan-400' : 'text-emerald-400'} /> 
               {featured ? 'Featured System · Municipal Infrastructure' : 'Sector Respawn · Utility Platform'}
             </p>
           </div>
         </div>
 
-        <p className={`text-slate-400/90 leading-relaxed mb-8 ${featured ? 'text-base md:text-lg' : 'text-sm'}`}>
+        <p className={`text-slate-300 leading-relaxed mb-8 ${featured ? 'text-base md:text-lg' : 'text-sm'}`}>
           {project.description}
         </p>
 

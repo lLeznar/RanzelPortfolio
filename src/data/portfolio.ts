@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     name: "Pisonet Kiosk & Network Management System",
-    status: "In Development",
+    status: "Active Development",
     description: "Actively developing a custom MERN + Electron self-service kiosk platform to automate billing, time tracking, and client-machine control for the Sector Respawn diskless network. Integrates real-time Socket.io communication and Arduino hardware interfaces.",
     tags: [
       { name: "React + Tailwind", color: "cyan" },
@@ -74,7 +74,9 @@ export const projects: Project[] = [
 
 export const skillsGroups: SkillGroup[] = [
   { 
-    category: "Languages", icon: React.createElement(Terminal, { size: 18 }), 
+    category: "Languages", 
+    description: "Core programming and scripting languages.",
+    icon: React.createElement(Terminal, { size: 18 }), 
     items: [
       { name: "PHP", icon: React.createElement(SiPhp, { size: 14 }) },
       { name: "JavaScript", icon: React.createElement(SiJavascript, { size: 14 }) },
@@ -85,7 +87,9 @@ export const skillsGroups: SkillGroup[] = [
     ] 
   },
   { 
-    category: "Frontend & Mobile", icon: React.createElement(Globe, { size: 18 }), 
+    category: "Frontend & Mobile", 
+    description: "Building responsive web and native mobile interfaces.",
+    icon: React.createElement(Globe, { size: 18 }), 
     items: [
       { name: "React", icon: React.createElement(SiReact, { size: 14 }) },
       { name: "React Native", icon: React.createElement(SiReact, { size: 14 }) },
@@ -95,7 +99,9 @@ export const skillsGroups: SkillGroup[] = [
     ] 
   },
   { 
-    category: "Backend", icon: React.createElement(Server, { size: 18 }), 
+    category: "Backend", 
+    description: "Scalable APIs and server-side business logic.",
+    icon: React.createElement(Server, { size: 18 }), 
     items: [
       { name: "Laravel", icon: React.createElement(SiLaravel, { size: 14 }) },
       { name: "Node.js", icon: React.createElement(SiNodedotjs, { size: 14 }) },
@@ -104,7 +110,9 @@ export const skillsGroups: SkillGroup[] = [
     ] 
   },
   { 
-    category: "Databases", icon: React.createElement(Database, { size: 18 }), 
+    category: "Databases", 
+    description: "Relational and NoSQL data modeling.",
+    icon: React.createElement(Database, { size: 18 }), 
     items: [
       { name: "PostgreSQL", icon: React.createElement(SiPostgresql, { size: 14 }) },
       { name: "MySQL", icon: React.createElement(SiMysql, { size: 14 }) },
@@ -114,7 +122,9 @@ export const skillsGroups: SkillGroup[] = [
     ] 
   },
   { 
-    category: "DevOps & Infra", icon: React.createElement(Server, { size: 18 }), 
+    category: "DevOps & Infra", 
+    description: "Production deployments and containerized architecture.",
+    icon: React.createElement(Server, { size: 18 }), 
     items: [
       { name: "Ubuntu", icon: React.createElement(SiUbuntu, { size: 14 }) },
       { name: "Docker", icon: React.createElement(SiDocker, { size: 14 }) },
@@ -125,7 +135,9 @@ export const skillsGroups: SkillGroup[] = [
     ] 
   },
   { 
-    category: "Tools & Design", icon: React.createElement(Code2, { size: 18 }), 
+    category: "Tools & Design", 
+    description: "Version control and collaborative design.",
+    icon: React.createElement(Code2, { size: 18 }), 
     items: [
       { name: "Git", icon: React.createElement(SiGit, { size: 14 }) },
       { name: "GitHub", icon: React.createElement(SiGithub, { size: 14 }) },
@@ -137,11 +149,46 @@ export const skillsGroups: SkillGroup[] = [
   },
 ];
 
-export const personalDetails = [
-  { value: "June 22, 2000", label: "Birth Date", icon: "cake" },
-  { value: "Male", label: "Gender", icon: "user" },
-  { value: "Filipino", label: "Nationality", icon: "flag" },
-  { value: "Single", label: "Status", icon: "heart" },
+import { Education } from '../types';
+
+export const educationDistinctions: Education[] = [
+  {
+    period: "2018 – 2022",
+    degree: "BS in Information Technology",
+    institution: "College for Research and Technology",
+    type: "degree",
+    achievements: [
+      "Top percentile graduate with focus on Software Engineering",
+      "Led capstone project digitalizing university record systems"
+    ]
+  },
+  {
+    period: "2016 – 2018",
+    degree: "ICT Vocational",
+    institution: "College for Research and Technology",
+    type: "degree",
+    achievements: [
+      "Specialized in advanced networking and hardware configuration"
+    ]
+  },
+  {
+    period: "2021 | TESDA",
+    degree: "NC III – Events Management",
+    institution: "National Certificate III",
+    type: "certification",
+    achievements: [
+      "Demonstrated logistics and complex operational coordination"
+    ]
+  },
+  {
+    period: "2021 | TESDA",
+    degree: "NC II – Computer System Services",
+    institution: "National Certificate II",
+    type: "certification",
+    achievements: [
+      "Certified in hardware deployment, routing, and network diagnostics"
+    ]
+  }
 ];
 
 export const sectionNames = ["Home", "Experience", "Projects", "Skills", "Education", "Contact"];

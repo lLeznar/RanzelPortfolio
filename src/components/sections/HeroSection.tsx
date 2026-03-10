@@ -1,24 +1,9 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Cake, User, Flag, Heart } from 'lucide-react';
-import { useTypingEffect } from '../../hooks/useTypingEffect';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import { staggerContainer, fadeIn, scaleIn } from '../../constants/animations';
 import { MagneticButton } from '../MagneticButton';
-import { personalDetails } from '../../data/portfolio';
-
-const iconMap: Record<string, React.ReactNode> = {
-  cake: <Cake size={18} className="text-cyan-400" />,
-  user: <User size={18} className="text-cyan-400" />,
-  flag: <Flag size={18} className="text-cyan-400" />,
-  heart: <Heart size={18} className="text-cyan-400" />,
-};
 
 export function HeroSection() {
-  const typingText = useTypingEffect([
-    'Full-Stack Web Developer',
-    'System Architect',
-    'Mobile Developer',
-    'System Administrator',
-  ]);
 
   return (
     <motion.header
@@ -43,13 +28,11 @@ export function HeroSection() {
             </span>
           </motion.h1>
 
-          <motion.div variants={fadeIn} className="text-xl md:text-2xl font-medium text-slate-400 mb-6 h-8 md:h-10">
-            <span className="text-slate-400">And I am a </span>
-            <span className="font-mono text-cyan-300">{typingText}</span>
-            <span className="text-cyan-400 animate-blink ml-0.5">|</span>
+          <motion.div variants={fadeIn} className="text-xl md:text-2xl font-medium text-slate-300 mb-6">
+            Systems Architect & Full-Stack Developer
           </motion.div>
 
-          <motion.p variants={fadeIn} className="max-w-lg mx-auto md:mx-0 text-base text-slate-400/90 leading-relaxed mb-8">
+          <motion.p variants={fadeIn} className="max-w-lg mx-auto md:mx-0 text-base text-slate-300 leading-relaxed mb-8">
             Results-driven developer digitalizing government infrastructure.
             Specialized in building large-scale full-stack applications,
             mobile platforms, and containerized server deployments.
@@ -80,40 +63,43 @@ export function HeroSection() {
               </a>
             </MagneticButton>
           </motion.div>
+
+          <motion.div variants={fadeIn} className="mt-12 pt-8 border-t border-slate-800/50 flex items-center justify-between md:max-w-xl">
+            <div className="text-center md:text-left">
+              <div className="text-2xl md:text-3xl font-extrabold text-slate-200">15+</div>
+              <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mt-1">LGU Departments</div>
+            </div>
+            <div className="h-10 w-px bg-slate-800/50"></div>
+            <div className="text-center md:text-left">
+              <div className="text-2xl md:text-3xl font-extrabold text-slate-200">100k+</div>
+              <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mt-1">Citizens Impacted</div>
+            </div>
+            <div className="h-10 w-px bg-slate-800/50"></div>
+            <div className="text-center md:text-left">
+              <div className="text-2xl md:text-3xl font-extrabold text-emerald-400">100%</div>
+              <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mt-1">Network Uptime</div>
+            </div>
+          </motion.div>
         </div>
 
         <motion.div variants={scaleIn} className="shrink-0">
           <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 group">
-            {/* Clean border glow */}
-            <div className="absolute inset-[-2px] rounded-[2.5rem] bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Soft, clean professional border */}
+            <div className="absolute inset-[-1px] rounded-[2.5rem] bg-gradient-to-b from-slate-700/50 to-transparent group-hover:from-slate-600/50 transition-colors duration-500"></div>
             
             {/* Inner Content Container */}
-            <div className="absolute inset-[1px] rounded-[2.4rem] overflow-hidden bg-slate-950 border border-white/10 shadow-2xl shadow-black/50">
+            <div className="absolute inset-[1px] rounded-[2.4rem] overflow-hidden bg-slate-900 border border-slate-800 shadow-xl">
               <img
-                src="/profile.jpg"
+                src="/profilepicoffice.png"
                 alt="Ranzel Aris Merto"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent group-hover:from-slate-950/40 group-hover:via-transparent transition-all duration-500"></div>
+              {/* Minimal interior shadow to blend edges */}
+              <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none"></div>
             </div>
           </div>
         </motion.div>
       </div>
-
-      <motion.div variants={fadeIn} className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12 md:mt-16">
-        {personalDetails.map((detail, i) => (
-          <div key={i} className="flex items-center gap-3 p-4 rounded-xl glass-card border border-white/5 bg-white/[0.02]">
-            {iconMap[detail.icon]}
-            <div>
-              <div className="text-sm md:text-base font-semibold text-slate-200">
-                {detail.value}
-              </div>
-              <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">{detail.label}</div>
-            </div>
-          </div>
-        ))}
-      </motion.div>
 
     </motion.header>
   );

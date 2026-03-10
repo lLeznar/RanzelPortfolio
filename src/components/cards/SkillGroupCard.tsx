@@ -17,9 +17,16 @@ export function SkillGroupCard({ group }: SkillGroupCardProps) {
         <div className="p-1.5 rounded-lg bg-white/5 text-slate-300 group-hover:bg-white/10 transition-colors">
           {group.icon}
         </div>
-        <h4 className="text-slate-200 font-semibold text-sm uppercase tracking-wider">
-          {group.category}
-        </h4>
+        <div>
+          <h4 className="text-slate-200 font-semibold text-sm uppercase tracking-wider">
+            {group.category}
+          </h4>
+          {group.description && (
+            <p className="text-xs text-slate-500 mt-1 font-mono">
+              {group.description}
+            </p>
+          )}
+        </div>
       </div>
       <div className="flex flex-wrap gap-2.5">
         {group.items.map((skill, i) => (
