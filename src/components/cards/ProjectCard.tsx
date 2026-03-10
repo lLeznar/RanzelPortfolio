@@ -32,15 +32,15 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 pointer-events-none" />
       )}
 
-      {/* Status badge */}
-      <div className={`absolute top-6 right-8 px-3 py-1 border rounded-full text-[9px] font-bold uppercase tracking-[0.2em] z-10 ${
+      {/* Status badge - inline on mobile, absolute on md+ */}
+      <div className={`md:absolute md:top-6 md:right-8 inline-block mb-3 md:mb-0 px-3 py-1 border rounded-full text-[9px] font-bold uppercase tracking-[0.2em] z-10 ${
         featured ? 'bg-white/10 border-white/20 text-slate-100 shadow-xl' : 'bg-white/5 border-white/10 text-slate-400'
       }`}>
         {project.status.toUpperCase()}
       </div>
 
       <div className="relative z-10 h-full flex flex-col">
-        <div className="flex items-start gap-4 mb-6 pr-32 md:pr-40">
+        <div className="flex items-start gap-4 mb-6">
           <div className={`p-3 rounded-2xl transition-colors ${
             featured ? 'bg-cyan-400/10 text-cyan-400 group-hover:bg-cyan-400/20' : 'bg-emerald-400/10 text-emerald-400 group-hover:bg-emerald-400/15'
           }`}>
