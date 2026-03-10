@@ -40,7 +40,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       </div>
 
       <div className="relative z-10 h-full flex flex-col">
-        <div className="flex items-start gap-4 mb-6">
+        <div className="flex items-start gap-4 mb-6 pr-32 md:pr-40">
           <div className={`p-3 rounded-2xl transition-colors ${
             featured ? 'bg-cyan-400/10 text-cyan-400 group-hover:bg-cyan-400/20' : 'bg-emerald-400/10 text-emerald-400 group-hover:bg-emerald-400/15'
           }`}>
