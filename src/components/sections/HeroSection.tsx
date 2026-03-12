@@ -16,7 +16,6 @@ export function HeroSection() {
   const typingText = useTypingEffect([
     'Full-Stack Web Developer',
     'System Architect',
-    'Mobile Developer',
     'System Administrator',
   ]);
 
