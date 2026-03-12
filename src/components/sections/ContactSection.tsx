@@ -91,6 +91,7 @@ export function ContactSection() {
                   href="https://github.com/lLeznar"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit my GitHub Profile"
                   className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group flex-1"
                 >
                   <Github size={18} className="group-hover:scale-110 transition-transform" />
@@ -102,6 +103,7 @@ export function ContactSection() {
                   href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit my LinkedIn Profile"
                   className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group flex-1"
                 >
                   <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
