@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Cake, User, Flag, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Briefcase, Award, ShieldCheck, Terminal } from 'lucide-react';
 import { useTypingEffect } from '../../hooks/useTypingEffect';
 import { staggerContainer, fadeIn, scaleIn } from '../../constants/animations';
 import { MagneticButton } from '../MagneticButton';
 import { personalDetails } from '../../data/portfolio';
 
 const iconMap: Record<string, React.ReactNode> = {
-  cake: <Cake size={18} className="text-cyan-400" />,
-  user: <User size={18} className="text-cyan-400" />,
-  flag: <Flag size={18} className="text-cyan-400" />,
-  heart: <Heart size={18} className="text-cyan-400" />,
+  briefcase: <Briefcase size={18} className="text-cyan-400" />,
+  award: <Award size={18} className="text-cyan-400" />,
+  shield: <ShieldCheck size={18} className="text-cyan-400" />,
+  terminal: <Terminal size={18} className="text-cyan-400" />,
 };
 
 export function HeroSection() {
@@ -84,18 +84,20 @@ export function HeroSection() {
 
         <motion.div variants={scaleIn} className="shrink-0">
           <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 group">
-            {/* Clean border glow */}
-            <div className="absolute inset-[-2px] rounded-[2.5rem] bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Softened outer border glow */}
+            <div className="absolute inset-[-2px] rounded-[2.5rem] bg-gradient-to-b from-slate-500/20 via-slate-600/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             {/* Inner Content Container */}
-            <div className="absolute inset-[1px] rounded-[2.4rem] overflow-hidden bg-slate-950 border border-white/10 shadow-2xl shadow-black/50">
+            <div className="absolute inset-[1px] rounded-[2.4rem] overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl shadow-black/50">
               <img
                 src="/profile.jpg"
                 alt="Ranzel Aris Merto"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover transition-all duration-700 grayscale-[0.8] contrast-[1.1] brightness-[0.85] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100"
               />
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent group-hover:from-slate-950/40 group-hover:via-transparent transition-all duration-500"></div>
+              {/* Tinted Overlay Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-cyan-950/50 to-slate-900/30 mix-blend-color transition-opacity duration-500 group-hover:opacity-0"></div>
+              {/* Bottom Shadow Overlay (keeps bottom dark always) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500"></div>
             </div>
           </div>
         </motion.div>

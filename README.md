@@ -28,7 +28,7 @@ A modern, Awwwards-tier developer portfolio built with **React 19**, **TypeScrip
 
 | # | Section | Background | Motion Effect |
 |---|---------|-----------|---------------|
-| 1 | **Hero** | `herobg.png` | Ken Burns zoom + parallax drift |
+| 1 | **Hero** | `herobg2.jpg` | Ken Burns zoom + parallax drift |
 | 2 | **Experience** | `expbg.jpg` | Horizontal pan + vignette pulse |
 | 3 | **Projects** | `projectbg.png` | Glitch slices + color shift |
 | 4 | **Technical Skills** | `technicalbg.jpg` | Matrix-rain + scanline flicker |

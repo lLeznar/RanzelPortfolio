@@ -1,15 +1,15 @@
 import React from 'react';
 import { 
-  Code2, Terminal, 
-  Server, Database, Globe, Cpu, Wifi
+  Terminal, 
+  Server, Database, Globe, Cpu, Wifi, Smartphone, Cloud, Wrench
 } from 'lucide-react';
 import {
-  SiPhp, SiJavascript, SiTypescript, SiPython,
-  SiReact, SiFlutter, SiTailwindcss, SiBootstrap,
+  SiPhp, SiJavascript, SiTypescript,
+  SiReact, SiTailwindcss, SiExpo, SiElectron,
   SiLaravel, SiNodedotjs, SiExpress,
-  SiPostgresql, SiMysql, SiMariadb, SiMongodb, SiFirebase,
-  SiUbuntu, SiDocker, SiNginx, SiApache, SiCloudflare,
-  SiGit, SiGithub, SiPostman, SiFigma
+  SiPostgresql, SiMysql, SiMongodb,
+  SiUbuntu, SiDocker, SiCloudflare,
+  SiGit, SiGithub, SiVite, SiPostman
 } from '@icons-pack/react-simple-icons';
 import { Experience, Project, SkillGroup } from '../types';
 
@@ -78,20 +78,21 @@ export const skillsGroups: SkillGroup[] = [
     items: [
       { name: "PHP", icon: React.createElement(SiPhp, { size: 14 }) },
       { name: "JavaScript", icon: React.createElement(SiJavascript, { size: 14 }) },
-      { name: "TypeScript", icon: React.createElement(SiTypescript, { size: 14 }) },
-      { name: "Python", icon: React.createElement(SiPython, { size: 14 }) },
-      { name: "C#", icon: React.createElement(Code2, { size: 14 }) },
-      { name: "Java", icon: React.createElement(Code2, { size: 14 }) }
+      { name: "TypeScript", icon: React.createElement(SiTypescript, { size: 14 }) }
     ] 
   },
   { 
-    category: "Frontend & Mobile", icon: React.createElement(Globe, { size: 18 }), 
+    category: "Web Frontend", icon: React.createElement(Globe, { size: 18 }), 
     items: [
       { name: "React", icon: React.createElement(SiReact, { size: 14 }) },
-      { name: "React Native", icon: React.createElement(SiReact, { size: 14 }) },
-      { name: "Flutter", icon: React.createElement(SiFlutter, { size: 14 }) },
-      { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss, { size: 14 }) },
-      { name: "Bootstrap", icon: React.createElement(SiBootstrap, { size: 14 }) }
+      { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss, { size: 14 }) }
+    ] 
+  },
+  { 
+    category: "Cross-Platform", icon: React.createElement(Smartphone, { size: 18 }), 
+    items: [
+      { name: "Expo", icon: React.createElement(SiExpo, { size: 14 }) },
+      { name: "Electron", icon: React.createElement(SiElectron, { size: 14 }) }
     ] 
   },
   { 
@@ -99,49 +100,42 @@ export const skillsGroups: SkillGroup[] = [
     items: [
       { name: "Laravel", icon: React.createElement(SiLaravel, { size: 14 }) },
       { name: "Node.js", icon: React.createElement(SiNodedotjs, { size: 14 }) },
-      { name: "Express", icon: React.createElement(SiExpress, { size: 14 }) },
-      { name: "REST APIs", icon: React.createElement(Server, { size: 14 }) }
+      { name: "Express", icon: React.createElement(SiExpress, { size: 14 }) }
     ] 
   },
   { 
     category: "Databases", icon: React.createElement(Database, { size: 18 }), 
     items: [
-      { name: "PostgreSQL", icon: React.createElement(SiPostgresql, { size: 14 }) },
       { name: "MySQL", icon: React.createElement(SiMysql, { size: 14 }) },
-      { name: "MariaDB", icon: React.createElement(SiMariadb, { size: 14 }) },
-      { name: "MongoDB", icon: React.createElement(SiMongodb, { size: 14 }) },
-      { name: "Firebase", icon: React.createElement(SiFirebase, { size: 14 }) }
+      { name: "PostgreSQL", icon: React.createElement(SiPostgresql, { size: 14 }) },
+      { name: "MongoDB", icon: React.createElement(SiMongodb, { size: 14 }) }
     ] 
   },
   { 
-    category: "DevOps & Infra", icon: React.createElement(Server, { size: 18 }), 
+    category: "DevOps & Infrastructure", icon: React.createElement(Cloud, { size: 18 }), 
     items: [
       { name: "Ubuntu", icon: React.createElement(SiUbuntu, { size: 14 }) },
-      { name: "Docker", icon: React.createElement(SiDocker, { size: 14 }) },
       { name: "Coolify", icon: React.createElement(Server, { size: 14 }) },
-      { name: "Nginx", icon: React.createElement(SiNginx, { size: 14 }) },
-      { name: "Apache", icon: React.createElement(SiApache, { size: 14 }) },
+      { name: "Docker", icon: React.createElement(SiDocker, { size: 14 }) },
       { name: "Cloudflare", icon: React.createElement(SiCloudflare, { size: 14 }) }
     ] 
   },
   { 
-    category: "Tools & Design", icon: React.createElement(Code2, { size: 18 }), 
+    category: "Tools & Build", icon: React.createElement(Wrench, { size: 18 }), 
     items: [
       { name: "Git", icon: React.createElement(SiGit, { size: 14 }) },
       { name: "GitHub", icon: React.createElement(SiGithub, { size: 14 }) },
-      { name: "VS Code", icon: React.createElement(Code2, { size: 14 }) },
-      { name: "Cursor", icon: React.createElement(Terminal, { size: 14 }) },
-      { name: "Postman", icon: React.createElement(SiPostman, { size: 14 }) },
-      { name: "Figma", icon: React.createElement(SiFigma, { size: 14 }) }
+      { name: "Vite", icon: React.createElement(SiVite, { size: 14 }) },
+      { name: "Postman", icon: React.createElement(SiPostman, { size: 14 }) }
     ] 
   },
 ];
 
 export const personalDetails = [
-  { value: "June 22, 2000", label: "Birth Date", icon: "cake" },
-  { value: "Male", label: "Gender", icon: "user" },
-  { value: "Filipino", label: "Nationality", icon: "flag" },
-  { value: "Single", label: "Status", icon: "heart" },
+  { value: "Pisonet Kiosk & IGIS", label: "Current Project", icon: "briefcase" },
+  { value: "4+ Years", label: "Experience", icon: "award" },
+  { value: "Enterprise-Grade", label: "DevOps Standards", icon: "shield" },
+  { value: "20+ Techs", label: "Tech Stack", icon: "terminal" },
 ];
 
 export const sectionNames = ["Home", "Experience", "Projects", "Skills", "Education", "Contact"];
