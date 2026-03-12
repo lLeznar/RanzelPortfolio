@@ -60,7 +60,7 @@ export default function App() {
   return (
     <div
       ref={scrollRef}
-      className="h-screen overflow-y-auto snap-y snap-mandatory bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 cursor-none"
+      className="h-[100dvh] overflow-y-auto w-screen snap-y snap-mandatory bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 cursor-none"
     >
       <CustomCursor />
       <ScrollProgress />

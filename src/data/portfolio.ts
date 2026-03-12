@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
     icon: React.createElement(Server, { size: 20 })
   },
   {
-    role: "Hardware Deployment & Configuration (OJT)",
+    role: "Hardware Deployment Specialist",
     company: "COMELEC",
     location: "Cabanatuan City, Nueva Ecija",
     period: "2020 – 2021",

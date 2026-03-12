@@ -38,9 +38,9 @@ export function ContactSection() {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={staggerContainer}
-      className="min-h-screen flex flex-col justify-center snap-start snap-always py-16 md:py-0"
+      className="min-h-screen sm:h-screen flex flex-col justify-center snap-start snap-always py-16 md:py-0 overflow-y-auto overflow-x-hidden pt-20 pb-10"
     >
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center min-h-max">
         <SectionTitle icon={Send} title="Contact Me" />
 
         <motion.div variants={fadeIn} className="max-w-2xl mx-auto w-full text-center mb-10">

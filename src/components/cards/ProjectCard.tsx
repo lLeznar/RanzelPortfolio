@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
-  const professionalTag = 'bg-white/5 text-slate-400 border-white/5 hover:bg-white/10 hover:text-slate-100';
+  const professionalTag = 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700 hover:text-slate-100';
   const colorMap = {
     cyan: professionalTag,
     emerald: professionalTag,
@@ -24,7 +24,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       className={`group relative rounded-3xl border transition-all duration-500 overflow-hidden md:col-span-2 ${
         featured 
           ? 'p-8 bg-slate-900/40 border-white/10 hover:border-white/30 shadow-2xl' 
-          : 'p-7 glass-card border-slate-800 hover:border-white/20'
+          : 'p-7 glass-card border border-slate-800 hover:border-slate-700 hover:shadow-lg hover:shadow-cyan-500/5'
       }`}
     >
       {/* Featured Glass Overlay */}

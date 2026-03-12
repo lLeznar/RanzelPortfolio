@@ -127,7 +127,9 @@ html, body {
   100% { opacity: 0.15; }
 }
 
-/* Global Cursor Hide - Final override */
-* {
-  cursor: none !important;
+/* Global Cursor Hide - Final override (Mouse only) */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }

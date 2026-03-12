@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 import { Experience } from '../../types';
-import { fadeIn } from '../../constants/animations';
 
 interface ExperienceCardProps {
   exp: Experience;
@@ -10,12 +9,11 @@ interface ExperienceCardProps {
 export function ExperienceCard({ exp }: ExperienceCardProps) {
   return (
     <motion.div
-      variants={fadeIn}
       whileHover={{ scale: 1.015, transition: { duration: 0.2 } }}
       className={`group relative flex flex-col md:flex-row gap-3 md:gap-5 p-4 md:p-6 rounded-2xl glass-card border transition-all duration-300 ${
         exp.type === 'current'
-          ? 'border-white/20 hover:border-white/40'
-          : 'border-slate-800 hover:border-white/20'
+          ? 'border-cyan-900/40 hover:border-cyan-700/50 hover:shadow-lg hover:shadow-cyan-500/10 bg-slate-900/40'
+          : 'border-slate-800 hover:border-slate-700 hover:shadow-lg hover:shadow-cyan-500/5'
       }`}
     >
       {/* Current badge */}
@@ -49,7 +47,7 @@ export function ExperienceCard({ exp }: ExperienceCardProps) {
         </p>
         <div className="flex flex-wrap gap-2">
           {exp.tags.map((tag, i) => (
-            <span key={i} className="px-2.5 py-1 bg-white/5 text-slate-400 text-[10px] uppercase font-bold rounded-md border border-white/5 hover:bg-white/10 hover:text-slate-200 transition-all">
+            <span key={i} className="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
               {tag}
             </span>
           ))}
