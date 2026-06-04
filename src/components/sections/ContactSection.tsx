@@ -126,6 +126,7 @@ export function ContactSection() {
                 <input
                   type="text"
                   placeholder="Your Name"
+                  aria-label="Your Name"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -137,6 +138,7 @@ export function ContactSection() {
                 <input
                   type="email"
                   placeholder="Your Email"
+                  aria-label="Your Email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -151,6 +153,7 @@ export function ContactSection() {
               <input
                 type="text"
                 placeholder="Subject"
+                aria-label="Subject"
                 required
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -161,6 +164,7 @@ export function ContactSection() {
             {/* Message */}
             <textarea
               placeholder="Your Message..."
+              aria-label="Your Message"
               required
               rows={4}
               value={formData.message}
