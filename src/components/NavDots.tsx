@@ -19,14 +19,15 @@ export function NavDots({ activeSection }: NavDotsProps) {
           key={i}
           onClick={() => handleClick(i)}
           aria-label={`Navigate to ${name} section`}
-          className="group flex items-center gap-3"
+          aria-current={activeSection === i ? 'step' : undefined}
+          className="group flex items-center gap-3 focus-visible:outline-none"
         >
-          <span className={`text-xs font-mono transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 ${activeSection === i ? 'text-cyan-400' : 'text-slate-500'}`}>
+          <span className={`text-xs font-mono transition-all duration-300 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 translate-x-2 group-hover:translate-x-0 group-focus-visible:translate-x-0 ${activeSection === i ? 'text-cyan-400' : 'text-slate-500'}`}>
             {name}
           </span>
-          <div className={`w-2.5 h-2.5 rounded-full border-2 transition-all duration-300 ${activeSection === i
+          <div className={`w-2.5 h-2.5 rounded-full border-2 transition-all duration-300 group-focus-visible:ring-2 group-focus-visible:ring-cyan-400 group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-slate-950 ${activeSection === i
               ? 'bg-cyan-400 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)] scale-125'
-              : 'bg-transparent border-slate-600 group-hover:border-slate-400'
+              : 'bg-transparent border-slate-600 group-hover:border-slate-400 group-focus-visible:border-slate-400'
             }`} />
         </button>
       ))}
