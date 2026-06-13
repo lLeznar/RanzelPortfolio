@@ -1,0 +1,3 @@
+## 2026-06-13 - Ensure Aria Labels for Secondary Component Instances
+**Learning:** Interactive elements such as icon-only links frequently miss `aria-label` attributes on secondary/different sections (e.g. they were missing in `HeroSection` but present in `ContactSection` for GitHub and LinkedIn). Same applies to missing keyboard focus states (`focus-visible`).
+**Action:** When auditing or implementing UI components across multiple sections, proactively double-check all interactive elements (especially icon-only links/buttons) in earlier sections (like `HeroSection`) to ensure they maintain the same level of accessibility as the most thorough section.
