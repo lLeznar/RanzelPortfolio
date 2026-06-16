@@ -1,0 +1,3 @@
+## 2024-05-18 - Icon-Only Link Accessibility & Keyboard Focus
+**Learning:** Icon-only links (like GitHub and LinkedIn buttons) in `src/components/sections/HeroSection.tsx` lacked accessible names, making them difficult for screen reader users to understand. Additionally, key interactive elements lacked clear visual indicators for keyboard focus (`focus-visible`).
+**Action:** Added `aria-label` attributes to icon-only anchor tags and implemented consistent `focus-visible` styles using existing Tailwind utility classes across all interactive links in the Hero section to ensure comprehensive keyboard and screen reader accessibility.
