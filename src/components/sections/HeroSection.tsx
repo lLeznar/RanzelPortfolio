@@ -69,12 +69,12 @@ export function HeroSection() {
               <MapPin size={15} className="text-cyan-400 shrink-0" /> Cabanatuan City, Nueva Ecija, Philippines
             </div>
             <MagneticButton className="flex">
-              <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
                 <Github size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
             <MagneticButton className="flex">
-              <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
                 <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
