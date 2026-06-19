@@ -19,7 +19,7 @@ export function NavDots({ activeSection }: NavDotsProps) {
           key={i}
           onClick={() => handleClick(i)}
           aria-label={`Navigate to ${name} section`}
-          className="group flex items-center gap-3"
+          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 rounded-full"
         >
           <span className={`text-xs font-mono transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 ${activeSection === i ? 'text-cyan-400' : 'text-slate-500'}`}>
             {name}
