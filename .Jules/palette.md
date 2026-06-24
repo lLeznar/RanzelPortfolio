@@ -1,0 +1,3 @@
+## 2023-10-27 - Wrapper Components and Accessibility
+**Learning:** Interactive wrapper components like `MagneticButton` do not automatically pass down accessibility attributes (like `aria-label` or focus states) to their child elements unless explicitly designed to do so. This can result in keyboard users not knowing which element has focus, or screen readers not announcing icon-only buttons correctly.
+**Action:** Always verify that interactive elements inside wrapper components have explicit `focus-visible` styling and `aria-label`s (if they lack text content) applied directly to the inner focusable element (e.g., the `<a>` or `<button>`).
