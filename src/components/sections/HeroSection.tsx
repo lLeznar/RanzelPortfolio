@@ -56,12 +56,12 @@ export function HeroSection() {
 
           <motion.div variants={fadeIn} className="flex flex-wrap justify-center md:justify-start items-center gap-3 text-sm font-mono">
             <MagneticButton>
-              <a href="mailto:ranzelmerto.rm@gmail.com" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="mailto:ranzelmerto.rm@gmail.com" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-1 focus-visible:ring-offset-slate-900 transition-all duration-300 group">
                 <Mail size={15} className="text-cyan-400 group-hover:scale-110 transition-transform shrink-0" /> ranzelmerto.rm@gmail.com
               </a>
             </MagneticButton>
             <MagneticButton>
-              <a href="tel:+639366808540" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="tel:+639366808540" className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-1 focus-visible:ring-offset-slate-900 transition-all duration-300 group">
                 <Phone size={15} className="text-cyan-400 group-hover:scale-110 transition-transform shrink-0" /> +639366808540
               </a>
             </MagneticButton>
@@ -69,12 +69,12 @@ export function HeroSection() {
               <MapPin size={15} className="text-cyan-400 shrink-0" /> Cabanatuan City, Nueva Ecija, Philippines
             </div>
             <MagneticButton className="flex">
-              <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://github.com/lLeznar" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub Profile" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-1 focus-visible:ring-offset-slate-900 transition-all duration-300 group">
                 <Github size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
             <MagneticButton className="flex">
-              <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group">
+              <a href="https://www.linkedin.com/in/ranzel-aris-merto-b51aa6296/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn Profile" className="w-11 h-11 flex items-center justify-center rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-1 focus-visible:ring-offset-slate-900 transition-all duration-300 group">
                 <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
               </a>
             </MagneticButton>
