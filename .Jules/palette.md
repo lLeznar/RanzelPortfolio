@@ -1,0 +1,3 @@
+## 2025-02-23 - Interactive Wrappers and Accessibility Inheritance
+**Learning:** Interactive wrapper components in this project (e.g., `MagneticButton`) do not automatically pass down accessibility attributes or focus states to their interactive children. Relying on wrappers for visual effects can inadvertently hide interactive elements from keyboard and screen reader users if the children themselves aren't properly configured.
+**Action:** Always verify that interactive elements (like `<a>` or `<button>`) *inside* custom wrapper components explicitly define their own `aria-label` (if icon-only) and `focus-visible` styling to ensure full accessibility.
