@@ -1,0 +1,3 @@
+## 2024-07-02 - MagneticButton Component Focus & ARIA Delegation
+**Learning:** Interactive wrapper components in this project (specifically `MagneticButton`) don't automatically pass down focus styles or accessible ARIA roles. It simply wraps children in a `<div ref={ref}>`. Because it lacks interactive semantics on its own, inner links and buttons become invisible to keyboard users when navigated, and icon-only inner children lack labels.
+**Action:** When wrapping interactive elements with `MagneticButton`, always explicitly add `aria-label` to icon-only inner children and attach standard `focus-visible` outline tailwind classes (`focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-cyan-400 focus-visible:ring-offset-2`) directly onto the child elements.
