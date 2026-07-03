@@ -1,0 +1,3 @@
+## 2024-07-03 - [Missing Focus States in Wrapper Components]
+**Learning:** Interactive wrapper components (like `MagneticButton`) may not automatically pass down accessibility attributes or handle focus correctly, leaving their inner interactive elements (like `<a>` or `<button>`) without clear focus-visible states when navigated via keyboard.
+**Action:** When using wrapper components for interactive elements, always verify and explicitly add `focus-visible` styling (e.g., `focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2`) to the inner interactive element to ensure keyboard accessibility.

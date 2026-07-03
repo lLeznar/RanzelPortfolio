@@ -56,7 +56,7 @@ export function ContactSection() {
             <MagneticButton>
               <a
                 href="mailto:ranzelmerto.rm@gmail.com"
-                className="flex items-center gap-4 p-5 rounded-2xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 group w-full"
+                className="flex items-center gap-4 p-5 rounded-2xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-all duration-500 group w-full"
               >
                 <div className="p-3 rounded-xl bg-cyan-400/10 text-cyan-400 group-hover:bg-cyan-400/20 transition-colors shrink-0">
                   <Mail size={22} />
@@ -72,7 +72,7 @@ export function ContactSection() {
             <MagneticButton>
               <a
                 href="tel:+639366808540"
-                className="flex items-center gap-4 p-5 rounded-2xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 group w-full"
+                className="flex items-center gap-4 p-5 rounded-2xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-all duration-500 group w-full"
               >
                 <div className="p-3 rounded-xl bg-cyan-400/10 text-cyan-400 group-hover:bg-cyan-400/20 transition-colors shrink-0">
                   <Phone size={22} />
@@ -92,7 +92,7 @@ export function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit my GitHub Profile"
-                  className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group flex-1"
+                  className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-all duration-300 group flex-1"
                 >
                   <Github size={18} className="group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-mono text-slate-400 group-hover:text-cyan-300 transition-colors">GitHub</span>
@@ -104,7 +104,7 @@ export function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit my LinkedIn Profile"
-                  className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all duration-300 group flex-1"
+                  className="flex items-center gap-2.5 px-5 py-3 rounded-xl glass-card border border-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-all duration-300 group flex-1"
                 >
                   <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-mono text-slate-400 group-hover:text-cyan-300 transition-colors">LinkedIn</span>
@@ -176,7 +176,7 @@ export function ContactSection() {
             <MagneticButton>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500/20 to-cyan-400/10 border border-cyan-400/30 hover:border-cyan-400/60 hover:from-cyan-500/30 hover:to-cyan-400/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] text-cyan-300 font-semibold text-sm tracking-wide transition-all duration-500 group"
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500/20 to-cyan-400/10 border border-cyan-400/30 hover:border-cyan-400/60 hover:from-cyan-500/30 hover:to-cyan-400/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 text-cyan-300 font-semibold text-sm tracking-wide transition-all duration-500 group"
               >
                 {status === 'sent' ? (
                   <>
