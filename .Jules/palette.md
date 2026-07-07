@@ -1,0 +1,3 @@
+## 2025-03-05 - MagneticButton Wrapper Accessibility Needs
+**Learning:** Interactive wrapper components in this project (e.g., `MagneticButton`) may not automatically pass down accessibility attributes, requiring explicit `aria-label` and `focus-visible` styling on their inner interactive elements (e.g. `<a>` or `<button>`) to ensure they remain screen-reader accessible and display focus rings when using keyboard navigation.
+**Action:** When working with or adding elements inside custom wrapper components like `MagneticButton`, proactively check and add `aria-label`s for icon-only elements and include the standard focus ring classes (`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400`).
